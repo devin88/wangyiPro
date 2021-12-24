@@ -1,0 +1,112 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Remote Python 3.8.12 (sftp://jidi@hk:22/home/jidi/axie/bin/python3)" />
+      <type value="Python SDK" />
+      <version value="Python 3.8.12" />
+      <homePath value="sftp://jidi@hk:22/home/jidi/axie/bin/python3" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file://$USER_HOME$/Library/Caches/PyCharm2019.2/remote_sources/-1365446089/201545293" type="simple" />
+            <root url="file://$USER_HOME$/Library/Caches/PyCharm2019.2/remote_sources/-1365446089/423266025" type="simple" />
+            <root url="file://$USER_HOME$/Library/Caches/PyCharm2019.2/python_stubs/-1365446089" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional WEB_SERVER_CONFIG_ID="ac2837a6-f0c8-4a8d-b8c2-8aadf9058aef" WEB_SERVER_CONFIG_NAME="jidi@hk:22" WEB_SERVER_CREDENTIALS_ID="sftp://jidi@hk:22" INTERPRETER_PATH="/home/jidi/axie/bin/python3" HELPERS_PATH="/home/jidi/.pycharm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="true" SKELETONS_PATH="" VERSION="">
+        <PathMappingSettings>
+          <option name="pathMappings">
+            <list>
+              <mapping local-root="$USER_HOME$/Library/Caches/PyCharm2019.2/remote_sources/-1365446089/201545293" remote-root="/usr/lib/python3.8" />
+              <mapping local-root="$USER_HOME$/Library/Caches/PyCharm2019.2/remote_sources/-1365446089/423266025" remote-root="/home/jidi/axie/lib/python3.8/site-packages" />
+            </list>
+          </option>
+        </PathMappingSettings>
+      </additional>
+    </jdk>
+    <jdk version="2">
+      <name value="Python 3.7 (venv39)" />
+      <type value="Python SDK" />
+      <version value="Python 3.9.8" />
+      <homePath value="$USER_HOME$/ops/venv39/bin/python3" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file:///Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9" type="simple" />
+            <root url="file:///Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload" type="simple" />
+            <root url="file://$USER_HOME$/ops/venv39/lib/python3.9/site-packages" type="simple" />
+            <root url="file://$USER_HOME$/Library/Caches/PyCharm2019.2/python_stubs/-2120957681" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional ASSOCIATED_PROJECT_PATH="$USER_HOME$/ops/ScrapyDemo" />
+    </jdk>
+    <jdk version="2">
+      <name value="Python 3.7 (venv39) (2)" />
+      <type value="Python SDK" />
+      <version value="Python 3.9.8" />
+      <homePath value="$USER_HOME$/ops/venv39/bin/python3" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file:///Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9" type="simple" />
+            <root url="file:///Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload" type="simple" />
+            <root url="file://$USER_HOME$/ops/venv39/lib/python3.9/site-packages" type="simple" />
+            <root url="file://$USER_HOME$/Library/Caches/PyCharm2019.2/python_stubs/-2120957681" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+    <jdk version="2">
+      <name value="Python 3.7" />
+      <type value="Python SDK" />
+      <version value="Python 3.9.7" />
+      <homePath value="/usr/local/bin/python3.9" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root url="file:///usr/local/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9" type="simple" />
+            <root url="file:///usr/local/Cellar/python@3.9/3.9.7_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload" type="simple" />
+            <root url="file:///usr/local/lib/python3.9/site-packages" type="simple" />
+            <root url="file://$USER_HOME$/Library/Caches/PyCharm2019.2/python_stubs/-1199943124" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" type="simple" />
+            <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" type="simple" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+  </component>
+</application>
