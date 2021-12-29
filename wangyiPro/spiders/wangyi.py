@@ -5,7 +5,7 @@ from selenium import webdriver
 class WangyiSpider(scrapy.Spider):
     name = 'wangyi'
     #allowed_domains = ['www.163.com']
-    start_urls = ['http://fund.eastmoney.com/manager/default.html#dt14;mcreturnjson;ftall;pn20;pi1;scabbname;stasc']
+    start_urls = ['http://news.163.com']
     model_urls = []
     driver = webdriver.Chrome(executable_path='/Users/jidi/ops/venv39/wangyiPro/wangyiPro/spiders/chromedriver')
 
