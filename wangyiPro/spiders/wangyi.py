@@ -1,6 +1,9 @@
 import scrapy
 from wangyiPro.items import WangyiproItem
 from selenium import webdriver
+import platform
+import sys
+
 #dfdfdfdf
 #test2
 #test45
@@ -9,7 +12,15 @@ class WangyiSpider(scrapy.Spider):
     #allowed_domains = ['www.163.com']
     start_urls = ['http://news.163.com']
     model_urls = []
-    driver = webdriver.Chrome(executable_path='/Users/jidi/ops/venv39/wangyiPro/wangyiPro/spiders/chromedriver')
+    osversion=platform.system()
+    if osversion == 'Windows':
+        driver = webdriver.Chrome(executable_path=r'c:\Users\jidi\dev\wangyiPro\wangyiPro\spiders\tools\windows\chromedriver.exe')
+    elif osversion == 'Mac':
+        driver = webdriver.Chrome(executable_path=r'/Users/jidi/ops/venv39/wangyiPro/wangyiPro/spiders/chromedriver')
+    elif osversion == 'Linux':
+        driver = webdriver.Chrome(executable_path=r'/Users/jidi/ops/venv39/wangyiPro/wangyiPro/spiders/chromedriver')
+    else:
+        sys.exit()
 
     def parse(self, response):
         li_list = response.xpath('//*[@id="index2016_wrap"]/div[1]/div[2]/div[2]/div[2]/div[2]/div/ul/li')
