@@ -3,6 +3,7 @@ from wangyiPro.items import WangyiproItem
 from selenium import webdriver
 #dfdfdfdf
 #test2
+#test3
 class WangyiSpider(scrapy.Spider):
     name = 'wangyi'
     #allowed_domains = ['www.163.com']
