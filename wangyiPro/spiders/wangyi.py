@@ -2,7 +2,7 @@ import scrapy
 from wangyiPro.items import WangyiproItem
 from selenium import webdriver
 import platform
-import sys
+import sys,os
 
 #dfdfdfdf
 #test2
@@ -13,12 +13,13 @@ class WangyiSpider(scrapy.Spider):
     start_urls = ['http://news.163.com']
     model_urls = []
     osversion=platform.system()
+    project_path = os.path.dirname(os.path.abspath(__file__))
     if osversion == 'Windows':
-        driver = webdriver.Chrome(executable_path=r'c:\Users\jidi\dev\wangyiPro\wangyiPro\spiders\tools\windows\chromedriver.exe')
+        driver = webdriver.Chrome(executable_path=project_path + r'.\tools\windows\chromedriver.exe')
     elif osversion == 'Mac':
-        driver = webdriver.Chrome(executable_path=r'/Users/jidi/ops/venv39/wangyiPro/wangyiPro/spiders/chromedriver')
+        driver = webdriver.Chrome(executable_path=project_path + r'./tools/mac/chromedriver')
     elif osversion == 'Linux':
-        driver = webdriver.Chrome(executable_path=r'/Users/jidi/ops/venv39/wangyiPro/wangyiPro/spiders/chromedriver')
+        driver = webdriver.Chrome(executable_path=project_path + r'./tools/linux/chromedriver')
     else:
         sys.exit()
 
