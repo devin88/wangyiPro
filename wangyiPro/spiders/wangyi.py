@@ -14,12 +14,15 @@ class WangyiSpider(scrapy.Spider):
     model_urls = []
     osversion=platform.system()
     project_path = os.path.dirname(os.path.abspath(__file__))
+
     if osversion == 'Windows':
-        driver = webdriver.Chrome(executable_path=project_path + r'.\tools\windows\chromedriver.exe')
-    elif osversion == 'Mac':
-        driver = webdriver.Chrome(executable_path=project_path + r'./tools/mac/chromedriver')
+        driver = webdriver.Chrome(executable_path = project_path + r'.\tools\windows\chromedriver.exe')
+    elif osversion == 'Darwin':
+        driver = webdriver.Chrome(executable_path =  project_path + r'/tools/mac/chromedriver')
+        print(driver)
+        #driver = webdriver.Chrome(executable_path =  r'/Users/jidi/ops/wangyiPro/wangyiPro/spiders/tools/mac/chromedriver')
     elif osversion == 'Linux':
-        driver = webdriver.Chrome(executable_path=project_path + r'./tools/linux/chromedriver')
+        driver = webdriver.Chrome(executable_path = project_path + r'/tools/linux/chromedriver')
     else:
         sys.exit()
 
