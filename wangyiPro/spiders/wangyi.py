@@ -10,7 +10,7 @@ import sys,os
 class WangyiSpider(scrapy.Spider):
     name = 'wangyi'
     #allowed_domains = ['www.163.com']
-    start_urls = ['https://push2.eastmoney.com/api/qt/ulist.np/get?fltt=2&invt=2&fields=f2,f3,f12,f14,f9&cb=jQuery183049534260854690526_1640907252730&ut=267f9ad526dbe6b0262ab19316f5a25b&secids=1.688200,0.300450,1.601225,1.600438,0.300037,0.300390,1.603906,1.600188,1.603260,0.002756,&_=1640907253735']
+    start_urls = ['http://fundf10.eastmoney.com/FundArchivesDatas.aspx?type=jjcc&code=512660&topline=10']
     model_urls = []
     osversion=platform.system()
     project_path = os.path.dirname(os.path.abspath(__file__))
