@@ -32,11 +32,16 @@ class WangyiSpider(scrapy.Spider):
             yield scrapy.Request(url=url,callback=self.parse_check)
 
     def parse_check(self,response):
-        page = response.url.split("/")[-2]
-        filename = f'quotes-{page}.html'
-        with open(filename, 'wb') as f:
-            f.write(response.body)
-        self.log(f'Saved file {filename}')
+
+        for tr in  response.xpath("//*/table[@class='w782 comm tzxq']/tbody/tr"):
+            print(tr)
+            print("===="*10)
+        #page = response.url.split("/")[-2]
+        #filename = f'quotes-{page}.html'
+        #with open(filename, 'wb') as f:
+            #f.write(response.body)
+
+        #self.log(f'Saved file {filename}')
 '''
     def parse(self, response):
         li_list = response.xpath('//*[@id="index2016_wrap"]/div[1]/div[2]/div[2]/div[2]/div[2]/div/ul/li')
