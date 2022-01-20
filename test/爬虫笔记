@@ -66,3 +66,76 @@
 
 
      作业：
+
+ 第三章   数据解析
+ 第一节: 概述
+    聚焦爬虫，爬取页面中指定的页面内容。
+        - 指定url
+        - 发起请求
+        - 获取响应数据
+        - 数据解析
+        - 持久化存储
+
+    - 基于正则实现的数据解析
+    - bs4
+    - xpath 重点（不止在python中可以，在其它语言中也可以）
+
+    数据解析的原理：
+    - 解析的局部文本内容都会在标签之间或者标签对应的属性中获取到
+    - 1.进行指定标签的定位
+    - 2.标签或者标签对应的属性中存储的数据值进行提取(解析)
+ 第二节:正则（1）
+ 单字符：
+      . : 除换行以外所有字符
+      []: [aoe] [a-w] 匹配集合中的任意一个字符
+      \d: 数字 [0-9]
+      \D: 非数字
+      \w: 数字、字母、下划线、中文
+      \W: 非\w
+      \s:所有的空白字符，空格、制表符、换页符等等。等价于 [\f\n\r\t\v]
+      \S: 非空白
+ 数量修饰符:
+      *:任意多次   >=0
+      +:至少一次 >=1
+      ?:可有可无 0次或1次
+      {m}:固定m次   hello{3,}
+      {m,}:至少m次
+      {m,n}:m-n次
+ 边界:
+      $:以某某结尾
+      ^:以某某开头
+ 分组:
+     (ab)
+ 贪婪模式: .*
+ 非贪婪模式: .*?
+
+ re.I  :忽略大小写
+ re.M  :多行匹配
+ re.S  : 单行匹配
+ re.sub(正则表达式，替换内容，字符串)
+
+
+ 正则练习：
+ import re
+ key = "javapythonc++php"
+ re.findall('python',key)[0]   #提取出python
+
+ key="<html><h1>hello world</h1></html>"
+ re.findall('<h1>(.*)</h1>',key)[0]   #提取出hello world
+
+ string='我喜欢身高为170的女孩'
+ re.findall('\d+',string)  #提取170
+
+ key='http://www.baidu.com and https://boob.com'
+ re.findall('https?://',key)    #提取出http://和https://
+
+ key ='lalala<hTml>hello</HtMl>hahah'
+ re.findall('<[Hh][Tt][mM][lL]>(.*)</[Hh][Tt][mM][lL]>',key)   #提取出hello
+
+ key = 'bobo@hit.edu.com'
+ re.findall('h.*?\.',key)     #匹配hit
+
+ key = 'saas and sas and saaas'
+ re.findall('sa{1,2}s',key)   #匹配sas和saas
+
+ 第二节  爬取
