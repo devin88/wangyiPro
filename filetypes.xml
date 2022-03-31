@@ -12,6 +12,7 @@
       <mapping pattern="IP" type="PLAIN_TEXT" />
       <mapping pattern="readme" type="PLAIN_TEXT" />
       <mapping pattern="SWName01txt" type="PLAIN_TEXT" />
+      <mapping pattern="爬虫笔记" type="PLAIN_TEXT" />
       <mapping pattern="DDD" type="PLAIN_TEXT" />
       <mapping pattern="ddddd" type="PLAIN_TEXT" />
       <mapping ext="default-zones" type="PLAIN_TEXT" />
