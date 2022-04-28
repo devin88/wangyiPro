@@ -1,0 +1,21 @@
+1.安装虚环境软件
+pip3 install -i https://mirrors.aliyun.com/pypi/simple virtualenv
+pip3 install -i https://mirrors.aliyun.com/pypi/simple virtualenvwrapper
+2.建立虚拟环境目录
+mkdir python_envs  # 在文稿目录下创建了一个统一管理虚拟环境的目录.
+
+which python3
+# 一般来说，得到的结果是 /usr/local/bin/python3
+
+which virtualenvwrapper.sh
+# 一般来说，得到的结果是 /Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenvwrapper.sh
+'''''
+##不是必须的内容
+export WORKON_HOME='/Users/你的用户名/Documents/python_envs'
+# 上面是我想创建的地址的位置 可根据自己的需要调整
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
+source /usr/local/bin/virtualenvwrapper.sh
+''''''
+
+3.生成虚拟环境
+virtualenv envname02
