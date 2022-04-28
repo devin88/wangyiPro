@@ -1,0 +1,38 @@
+一.git提交代码简单流程.
+
+第一步，找到代码仓库地址 拉去项目代码
+
+git  clone ssh://地址路径，最后用http的地址，而不用ssh路径，http分配的才是自己账号使用的代码分支
+
+第二步：如果首次拉去，会输入git账号，首次登录之后，后面就不需要做任何操作了
+
+第三步：git add . 把代码提交到缓存区
+
+第四步：git commit -m "备注" 提交代码
+
+第五步:把代码合并到远程分支中去 git push  （origin test）
+如果没有填，就是推送到默认分支，一般在退文件的时候，最后先拉去一下代码 git pull
+
+把分支合并到主支
+假如我们现在在test分支上，刚开发完项目，执行了下列命令
+git add .
+git commit -m ‘test'
+git push -u origin test
+然后我们要把dev分支的代码合并到master分支上 该如何？
+二.首先切换到master分支上
+1.git checkout master
+如果是多人开发的话 需要把远程master上的代码pull下来
+2.git pull origin master
+如果是自己一个开发就没有必要了，为了保险期间还是pull
+然后我们把test分支的代码合并到master上
+3.git merge test
+'''''
+$git merge test
+CONFLICT (add/add):Merge conflict in public/nginx.htaccess
+Auto-merging public/nginx.htaccess
+Auto-merging app/Http/Controllers/Logic/PaypalTransactionLogic.php
+ConFLICT(content):Merge conflict in app/Http/Controllers/Logic/PaypalTransactionLogic.php
+Auto-merginig app/Exports/ExportCsv.php
+CONFLICT(content):Merge conflict in app/Exports/ExportCsv.php
+Automatic merge failed;fix conflicts and then commit the result.
+'''''
