@@ -1,27 +1,24 @@
 一.git提交代码简单流程.
 
 第一步，找到代码仓库地址 拉去项目代码
-
 git  clone ssh://地址路径，最后用http的地址，而不用ssh路径，http分配的才是自己账号使用的代码分支
-
 第二步：如果首次拉去，会输入git账号，首次登录之后，后面就不需要做任何操作了
-
 第三步：git add . 把代码提交到缓存区
-
 第四步：git commit -m "备注" 提交代码
-
 第五步:把代码合并到远程分支中去 git push  （origin test）
 如果没有填，就是推送到默认分支，一般在退文件的时候，最后先拉去一下代码 git pull
-
+二、分支切换
 把分支合并到主支
 假如我们现在在test分支上，刚开发完项目，执行了下列命令
 git add .
 git commit -m ‘test'
 git push -u origin test
 然后我们要把dev分支的代码合并到master分支上 该如何？
-二.首先切换到master分支上
+
+首先切换到master分支上
 1.git checkout master
-如果是多人开发的话 需要把远程master上的代码pull下来
+
+#如果是多人开发的话 需要把远程master上的代码pull下来
 2.git pull origin master
 如果是自己一个开发就没有必要了，为了保险期间还是pull
 然后我们把test分支的代码合并到master上
@@ -36,3 +33,62 @@ Auto-merginig app/Exports/ExportCsv.php
 CONFLICT(content):Merge conflict in app/Exports/ExportCsv.php
 Automatic merge failed;fix conflicts and then commit the result.
 '''''
+4.查看git 状态
+$git status
+'''''
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+   (Use 'git push' to publish your local commits)
+
+You have unmerged paths.
+   (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+   (Use "git add <file>..." to mark resolution)
+       both modiffied: app/Exports/ExportCsv.php
+       both modified:  app/Http/Controllers/Logic/PaypalTransactionLogic.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+'''''
+
+git chechout routes/listing.php 处理冲突文件listing
+处理冲突文件需要合并文件，把在提交代码的时候处理
+上面的意思就是你有12个commit，需要push到远程master上
+执行下面命令即可
+5. git push origin master
+'''''''
+Enumerating objects: 39, done.
+Counting objects:100% (36/36),done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (21/21), 1.92 KiB | 981.00 Kib/s,done.
+Total 21 (delta 15), resed 0 (delta 0),pack-reused 0
+remote: GitLab: You are not allowed to push code to protected branches on this project.
+'''''''
+
+需求，单独创建分支
+在创建之前先git pull 拉取最新项目代码
+git checkout -b dev 每次创建独立分支
+2) 创建并切到新的分支中:
+命令: git checkout -b 分支名称
+$ git checkout -b dev1
+''''''
+Switched to a new branch dev1
+''''''
+3) 删除本地分支和原地分支:
+我现在在dev20181018分支上，想删除dev20181018分支
+
+　　1 先切换到别的分支: git checkout dev20180927
+　　2 删除本地分支： git branch -d dev20181018
+　　3 如果删除不了可以强制删除，git branch -D dev20181018
+　　4 有必要的情况下，删除远程分支(慎用)：git push origin --delete dev20181018
+　　5 在从公用的仓库fetch代码：git fetch origin dev20181018:dev20181018
+　　6 然后切换分支即可：git checkout dev20181018
+　　注：上述操作是删除个人本地和个人远程分支，如果只删除个人本地，请忽略第4步
+
+6.代码回滚
+
+git log # 得到你需要回退一次提交的commit id
+git reset --hard <commit_id>  # 回到其中你想要的某个版
+或者
+git reset --hard HEAD^        # 回到最新的一次提交
